@@ -1,0 +1,27 @@
+/* 
+    Document   : css
+    Created on : Oct 6, 2013, 4:14:09 PM
+    Author     : Bob
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+footer {
+   position:absolute;
+   bottom:0;
+   width:90%;
+   height:60px;
+}
+
+p.footer {
+    alignment-adjust: central;
+}
+
+container {
+    height:100%;
+}
+

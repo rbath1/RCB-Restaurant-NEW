@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>FrontController</servlet-name>
+        <servlet-class>controller.FrontController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MenuController</servlet-name>
+        <servlet-class>controller.MenuController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderController</servlet-name>
+        <servlet-class>controller.OrderController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateController</servlet-name>
+        <servlet-class>controller.UpdateController</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>FrontController</servlet-name>
+        <url-pattern>/FrontController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MenuController</servlet-name>
+        <url-pattern>/MenuController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderController</servlet-name>
+        <url-pattern>/OrderController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateController</servlet-name>
+        <url-pattern>/UpdateController</url-pattern>
+    </servlet-mapping>
+    
+    <context-param>
+        <param-name>webmaster</param-name>
+        <param-value>webmaster@webmaster.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>UrlString</param-name>
+            <param-value>jdbc:mysql://localhost:3306/restaurant</param-value>
+    </context-param>
+    <context-param>
+        <param-name>driverClass</param-name>
+            <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>user</param-name>
+            <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+            <param-value>kerouac00</param-value>
+    </context-param>
+    
+    <listener>
+        <listener-class>
+            context.listener.ContextListener
+        </listener-class>
+    </listener>
+    
+    
+    
+    <session-config>
+        <session-timeout>
+            5
+        </session-timeout>
+    </session-config>
+</web-app>
